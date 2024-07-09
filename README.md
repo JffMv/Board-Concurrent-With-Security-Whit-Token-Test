@@ -64,22 +64,15 @@ For generate documentation update the pom.xml add and later use "mvn package":
 ## Architecture
 ![img.png](img.png)
 
-Este proyecto tiene una arquitectura de 
-This project is based on a REST API architecture where it consumes a service from the URL https://www.alphavantage.co/. The service sends a JSON file containing company data.
+This project has two architectures: one for the front-end and another for the back-end. The front-end is initialized with React, where it calls the Editor, and within the Editor, it calls Canvas, which contains the logic to render the screen based on p5. Canvas connects to the server through a WSBBChannel object, which is created using a class within the same project and expects a URL to establish the server connection. In summary, React displays the Editor as the skeleton for the Canvas to render actions, and within the Canvas, a WSBBChannel object connects to the server.
 
-It's worth noting that a JavaScript client is created to consume the REST service created in Java, which in turn consumes the API. Additionally, there is a concurrent client from the `Concurrent` class in Java that consumes the REST service as depicted in the following image.
-![img_2.png](img_2.png)
-
-The following image shows the deployed service being consumed from AWS at the link:
-http://ec2-54-165-39-183.compute-1.amazonaws.com:8080/
+On the other hand, the back-end architecture supports endpoints, with "/bbService" handling the creation, saving, and modification of sessions, which are listening and sending messages as they are modified. There are specific configurations to ensure concurrency with this endpoint. The Spring Boot application startup class includes a configuration for the port where the endpoint is listening. In BBConfigurator, it informs Spring Boot that this technology will be used and to keep listening. Lastly, there is an implementation of DrawingServiceController to confirm that the server is responding.
 
 It may not be running currently because the service closes upon disconnect. However the app is work.
 ![img_1.png](img_1.png)
 
-
-## Extensibility
-
-The project features an extensible design with a proposed interface so that when implemented in a new class, it can be modified and customized as needed for the service.
+The following image shows the deployed service being consumed from AWS at the link:
+http://ec2-54-165-39-183.compute-1.amazonaws.com:8080/
 
 
 
@@ -96,4 +89,4 @@ The project features an extensible design with a proposed interface so that when
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.txt](LICENSE.txt) file for details
+This project is licensed under the MIT License - see the [LICENCE.txt](LICENCE.txt) file for details

@@ -19,6 +19,7 @@ p.fill(255, 255, 255);
 }
 }
 };
+
 React.useEffect(() => {
 myp5.current = new p5(sketch, 'container');
 setSvrStatus({loadingState: 'Canvas Loaded'});
@@ -33,6 +34,8 @@ console.log('Clossing connection ...')
 comunicationWS.current.close();
 };
 }, []);
+
+
 function drawPoint(x, y) {
 myp5.current.ellipse(x, y, 20, 20);
 }
