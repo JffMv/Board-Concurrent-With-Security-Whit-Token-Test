@@ -16,6 +16,6 @@ public class AppWebScreenDrawSocket {
 		if (System.getenv("PORT") != null) {
 			return Integer.parseInt(System.getenv("PORT"));
 		}
-		return 8080; //returns default port if PORT isn't set (i.e. on localhost)
+		return 8443; //returns default port if PORT isn't set (i.e. on localhost)
 	}
 }
