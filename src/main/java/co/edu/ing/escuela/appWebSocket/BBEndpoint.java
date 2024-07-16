@@ -24,9 +24,10 @@ public class BBEndpoint {
     private boolean accepted = false;
 
     //This code allows to include a bean directly from the application context
-    TicketRepository ticketRepo =
-            (TicketRepository)
-                    BBApplicationContextAware.getApplicationContext().getBean("ticketRepository");
+    TicketRepository ticketRepo = (TicketRepository)
+                    BBApplicationContextAware
+                            .getApplicationContext()
+                            .getBean("ticketRepository");
 
 
     /* Call this method to send a message to all clients */
