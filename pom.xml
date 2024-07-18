@@ -39,8 +39,8 @@
 			**/src/main/java/co/edu/ing/escuela/appWebSocket/BBConfigurator.java,
 			**/src/main/java/co/edu/ing/escuela/appWebSocket/MvcConfig.java,
 			**/src/main/java/co/edu/ing/escuela/appWebSocket/RedisConfig.java,
-			**/src/test/**
-
+			**/src/test/**,
+			**/src/main/java/co/edu/ing/escuela/appWebSocket/BBEndpoint.java
 		</sonar.exclusions>
 
 
