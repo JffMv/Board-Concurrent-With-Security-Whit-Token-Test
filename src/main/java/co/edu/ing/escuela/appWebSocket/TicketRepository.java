@@ -19,6 +19,7 @@ public class TicketRepository {
     @Resource(name = "stringRedisTemplate")
     private ListOperations<String, String> listTickets;
     private int ticketnumber;
+    @Generated
     public TicketRepository() {
     }
     public synchronized Integer getTicket() {
@@ -30,6 +31,7 @@ public class TicketRepository {
         Long isValid = listTickets.getOperations().boundListOps("ticketStore").remove(0, ticket);
         return (isValid > 0l);
     }
+    @Generated
     private void eviction() {
         // Delete tickets after timout or include this functionality in checkticket
     }
