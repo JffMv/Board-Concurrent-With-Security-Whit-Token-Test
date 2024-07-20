@@ -5,6 +5,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class DrawingServiceController {
+    public TicketRepository ticketRepo;
+
     @RequestMapping(
             value = "/status",
             method = RequestMethod.GET,

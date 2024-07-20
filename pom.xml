@@ -40,7 +40,8 @@
 			**/src/main/java/co/edu/ing/escuela/appWebSocket/MvcConfig.java,
 			**/src/main/java/co/edu/ing/escuela/appWebSocket/RedisConfig.java,
 			**/src/test/**,
-			**/src/main/java/co/edu/ing/escuela/appWebSocket/BBEndpoint.java
+			**/src/main/java/co/edu/ing/escuela/appWebSocket/BBEndpoint.java,
+			**/src/main/java/co/edu/ing/escuela/appWebSocket/WebSecurityConfig.java
 		</sonar.exclusions>
 
 
@@ -119,6 +120,7 @@
 								<exclude>**/appWebSocket/AppWebScreenDrawSocket.class</exclude>
 								<exclude>**/appWebSocket/BBApplicationContextAware.class</exclude>
 								<exclude>**/appWebSocket/Generated.class</exclude>
+								<exclude>**/appWebSocket/WebSecurityConfig.class</exclude>
 							</excludes>
 						</configuration>
 					</execution>

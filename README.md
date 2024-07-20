@@ -1,5 +1,5 @@
 # Client Concurrent
-This for multi user.
+This is a board interactive drawing allow multiple users in concurrent and real time.  
 [Repository in GitHub here](https://github.com/JffMv/webSocket-ScreenDraw)
 
 ## Getting Started
@@ -22,13 +22,12 @@ git 2.44
 java
 [Install Java](https://www.oracle.com/co/java/technologies/downloads/)
 
+docker
+[Install Docker](https://www.docker.com/products/docker-desktop/)
 
-## Running the tests
 
-This classes haven´t unit test
 
 ## Deployment
-
 
 The process were building project maven with the command:
 
@@ -59,6 +58,19 @@ For generate documentation update the pom.xml add and later use "mvn package":
     </plugins>
 </reporting>
 ```
+
+## Docker - Redis
+Open of docker desktop and the run in terminal:
+
+Verify installation:
+ ```
+    docker --version
+```
+Run Redis with docker
+```
+docker run --name some-redis -p 45000:6379 -d redis
+```
+
 
 
 ## Architecture
